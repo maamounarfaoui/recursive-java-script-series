@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//exercice 1
+        function fact(n){
+            if (n==1){
+                return 1 
+            }
+            else{
+                return (n*fact(n-1))
+            }
+        }
+        console.log(fact(5))
+
+//exercice 2
+        function summArray(arr){
+            if (arr.length==0){
+                return 0
+            }
+            else{
+                return arr[0] + summArray(arr.slice(1));
+            }
+        }
+        console.log(summArray([1,2,3,4]))
+
+//exercie 3
+        function countDigits(n){
+            if (n==0){
+                return 0
+            }
+            else if (n<10){
+                return 1
+            }
+            else{
+                return 1+countDigits(n/10) 
+            }
+        }
+        console.log(countDigits(12345))
+
+//exercice 4
+        function reverse(n){
+            if (n==1){
+                return 1
+            }
+            else if (n==0){
+                return 0
+            }
+            else{
+                return ( n.toString() + "," + (reverse(n-1)).toString() )
+            }
+        }
+        console.log(reverse(5))
+    </script>
+</body>
+</html>
